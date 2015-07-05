@@ -23,5 +23,5 @@ CMD uid=$(ls -ldn $GOPATH/src/github.com/monetas/ | awk '{print $3}') && \
     cat /home/dev/.bashrc bashrc >> /opt/bashrc && \
     chown -R dev:dev $GOPATH && \
     sh /opt/run_services.sh && \
-    cd $GOPATH/src/github.com/monetas/gotary/Dockerfiles && sh install.sh && \
+    cd $GOPATH/src/github.com/monetas/gotary/scripts/database && sh install.sh && \
     sudo -i -u dev bash --rcfile /opt/bashrc

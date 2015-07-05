@@ -12,7 +12,20 @@ apt-get install -y --force-yes --no-install-recommends \
     emacs-snapshot \
     xclip \
     silversearcher-ag \
-    python3
+    python3 \
+    software-properties-common
+
+# tmate
+add-apt-repository -y ppa:nviennot/tmate
+apt-get update
+apt-get install -y --force-yes --no-install-recommends \
+    python-software-properties \
+    tmate
+
+# newest git version
+add-apt-repository -y ppa:git-core/ppa
+apt-get update
+apt-get install  -y --force-yes --no-install-recommends git
 
 apt-get autoremove
 
